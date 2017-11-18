@@ -1,6 +1,6 @@
 <?php
 
-class SmartSenderTransport extends Swift_Transport_SmartSenderTransport
+class Swift_SmartSenderTransport extends Swift_Transport_SmartSenderTransport
 {
     public function isStarted()
     {
