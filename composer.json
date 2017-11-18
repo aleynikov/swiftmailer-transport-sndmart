@@ -1,0 +1,19 @@
+{
+    "name": "aleynikov/swiftmailer-transport-sndmart",
+    "type": "library",
+    "description": "Support SmartSender service for the SwiftMailer",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+      {
+          "name": "Maxim Aleynikov",
+          "email": "max.aleyinikov@gmail.com"
+      }
+    ],
+    "require": {
+        "swiftmailer/swiftmailer": "~5.0"
+    },
+    "autoload": {
+        "psr-0": { "": "classes/" }
+    }
+}
