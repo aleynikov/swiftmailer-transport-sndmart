@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpunit bootstrap="../vendor/autoload.php"
+    colors="true"
+    stopOnFailure="true">
+    <testsuites>
+        <testsuite name="send_message">
+            <file>message/SendMessageTest.php</file>
+        </testsuite>
+    </testsuites>
+    <php>
+        <var name="API_ID" value="%api_id%"/>
+        <var name="SECRET_KEY" value="%secret_key%"/>
+    </php>
+</phpunit>
