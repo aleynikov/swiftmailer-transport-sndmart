@@ -10,6 +10,7 @@ class SendMessageTest extends TestCase
         $transport = Swift_SmartSenderTransport::newInstance(
             $GLOBALS['API_ID'],
             $GLOBALS['SECRET_KEY']);
+        $transport->setDebug(false);
 
         $this->mailer = Swift_Mailer::newInstance($transport);
     }
