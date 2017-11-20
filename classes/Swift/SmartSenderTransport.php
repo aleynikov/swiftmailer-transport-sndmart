@@ -8,7 +8,7 @@ class Swift_SmartSenderTransport extends Swift_Transport_SmartSenderTransport
 
     private $response;
 
-    public function __construct($key, $secret, $endpoint = 'https://api.sndmart.com/send')
+    public function __construct($key = null, $secret = null, $endpoint = 'https://api.sndmart.com/send')
     {
         $this->key      = $key;
         $this->secret   = $secret;
