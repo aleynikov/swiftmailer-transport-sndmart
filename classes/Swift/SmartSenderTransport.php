@@ -61,18 +61,14 @@ class Swift_SmartSenderTransport extends Swift_Transport_SmartSenderTransport
             'key'     => $this->key,
             'secret'  => $this->secret,
             'message' => [
-                'from_email' => $message->getFrom(),
-                'reply_to'   => [
-                    [
-                        'email' => $message->getReplyTo(),
-                    ]
-                ],
+                'from_email' => key($message->getFrom()),
+                'reply_to'   => array_map(function($name, $email) {
+                    return compact('name', 'email');
+                }, $message->getReplyTo(), array_keys($message->getReplyTo())),
                 'subject'    => $message->getSubject(),
-                'to'         => [
-                    [
-                        'email' => $message->getTo(),
-                    ]
-                ],
+                'to'         => array_map(function($name, $email) {
+                    return compact('name', 'email');
+                }, $message->getTo(), array_keys($message->getTo())),
                 'text'       => $message->getBody(),
                 'html'       => $message->getBody(),
             ],
