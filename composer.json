@@ -2,7 +2,7 @@
     "name": "aleynikov/swiftmailer-transport-sndmart",
     "type": "library",
     "description": "Support SmartSender service for the SwiftMailer",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "license": "MIT",
     "authors": [
       {
