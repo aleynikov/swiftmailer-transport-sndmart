@@ -11,12 +11,12 @@
       }
     ],
     "require": {
-        "swiftmailer/swiftmailer": "5.x-dev"
     },
     "autoload": {
         "psr-0": { "": "classes/" }
     },
     "require-dev": {
-        "phpunit/phpunit": "5.7.x-dev"
+        "phpunit/phpunit": "5.7.x-dev",
+        "swiftmailer/swiftmailer": "^5.4"
     }
 }
