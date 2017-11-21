@@ -95,7 +95,6 @@ class Swift_Transport_SmartSenderTransport implements Swift_Transport
                 'to'         => array_map(function($name, $email) {
                     return compact('name', 'email');
                 }, $to, array_keys($to)),
-                'text'       => $message->getBody(),
                 'html'       => $message->getBody(),
             ],
         ];
