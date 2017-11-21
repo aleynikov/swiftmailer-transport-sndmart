@@ -3,6 +3,7 @@
     "type": "library",
     "description": "Support SmartSender service for the SwiftMailer",
     "license": "MIT",
+    "minimum-stability": "stable",
     "authors": [
       {
           "name": "Maxim Aleynikov",
