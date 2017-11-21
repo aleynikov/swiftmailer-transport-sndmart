@@ -2,7 +2,6 @@
     "name": "aleynikov/swiftmailer-transport-sndmart",
     "type": "library",
     "description": "Support SmartSender service for the SwiftMailer",
-    "minimum-stability": "dev",
     "license": "MIT",
     "authors": [
       {
@@ -11,12 +10,12 @@
       }
     ],
     "require": {
+        "swiftmailer/swiftmailer": "~5.0"
     },
     "autoload": {
         "psr-0": { "": "classes/" }
     },
     "require-dev": {
-        "phpunit/phpunit": "5.7.x-dev",
-        "swiftmailer/swiftmailer": "^5.4"
+        "phpunit/phpunit": "5.7.x-dev"
     }
 }
