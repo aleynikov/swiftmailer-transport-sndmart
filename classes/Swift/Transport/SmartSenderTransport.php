@@ -82,6 +82,19 @@ class Swift_Transport_SmartSenderTransport implements Swift_Transport
 
         reset($from);
 
+        $bodyHtml = $bodyText = $message->getBody();
+
+        foreach ($message->getChildren() as $child) {
+            switch ($child->getContentType()) {
+                case 'text/html';
+                    $bodyHtml = $child->getBody();
+                    break;
+                case 'text/plain';
+                    $bodyText = $child->getBody();
+                    break;
+            }
+        }
+
         $data = [
             'key'     => $this->_apiId,
             'secret'  => $this->_secretKey,
@@ -95,7 +108,8 @@ class Swift_Transport_SmartSenderTransport implements Swift_Transport
                 'to'         => array_map(function($name, $email) {
                     return compact('name', 'email');
                 }, $to, array_keys($to)),
-                'html'       => $message->getBody(),
+                'html'       => $bodyHtml,
+                'text'       => $bodyText,
             ],
         ];
 
